@@ -257,4 +257,4 @@ for the default size is bodyTextS and color is ColorTheme.black
 
 ## Information
 
-[Github Repo](https://github.com/serapion123321/flutter-ui-core)
+[Github Repo](https://github.com/serapion123321/standard-ui-core)

@@ -1,7 +1,7 @@
 name: standard_ui_core
-description: A new Flutter package project.
+description: Package for simple UI.
 version: 0.0.1
-homepage:
+homepage: https://github.com/serapion123321/standard-ui-core
 
 environment:
   sdk: '>=2.19.6 <3.0.0'
