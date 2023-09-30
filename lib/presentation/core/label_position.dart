@@ -1,0 +1,1 @@
+enum LabelPosition { left, right }
