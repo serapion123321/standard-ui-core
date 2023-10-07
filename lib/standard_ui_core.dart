@@ -5,11 +5,16 @@ import 'package:standard_ui_core/presentation/utility/color.dart';
 import 'package:standard_ui_core/presentation/utility/typography.dart';
 
 class InitialValue{
+  /// static screenSize for change value of screenSize device, can use be overwrite with getX or MediaQuery
+  /// please use that on first initialize app
+  /// value default still not flexible enough to follow change in device size
   static setScreenSize({
     Size? screenSizeCustom
   }){
-    screenSize = screenSizeCustom ?? WidgetsBinding.instance.window.physicalSize;
+    screenSize = screenSizeCustom ?? WidgetsBinding.instance.platformDispatcher.views.first.physicalSize;
   }
+  /// static setBodyFontSize use to change default value of BodyFontSize, follow your own design system
+  /// can use in first initialize app
   static setBodyFontSize({
     double? bodyTextXxl,
     double? bodyTextXl,
@@ -27,7 +32,8 @@ class InitialValue{
     StandardFontSize.bodyTextXs = bodyTextXs ?? 10;
     StandardFontSize.bodyTextXxs = bodyTextXxs ?? 8;
   }
-
+  /// static setHeaderFontSize use to change default value of HeaderFontSize, follow your own design system
+  /// can use in first initialize app
   static setHeaderFontSize({
     double? h1,
     double? h2,
@@ -43,7 +49,8 @@ class InitialValue{
     StandardFontSize.h5 = h5 ?? 16;
     StandardFontSize.h6 = h6 ?? 12;
   }
-  
+  /// static setPrimaryColor use to change default value of PrimaryColor, follow your own design system
+  /// can use in first initialize app
   static setPrimaryColor({
     Color? primary100,
     Color? primary200,
@@ -65,7 +72,8 @@ class InitialValue{
     ColorTheme.primary800 =  primary800 ?? const Color(0xff032452);
     ColorTheme.primary900 =  primary900 ?? const Color(0xff010c1b);
   }
-
+  /// static setSecondaryColor use to change default value of SecondaryColor, follow your own design system
+  /// can use in first initialize app
   static setSecondaryColor({
     Color? secondary100,
     Color? secondary200,
@@ -87,7 +95,8 @@ class InitialValue{
     ColorTheme.secondary800 =  secondary800 ?? const Color(0xff4a250b);
     ColorTheme.secondary900 =  secondary900 ?? const Color(0xff190c04);
   }
-
+  /// static setSuccessColor use to change default value of SuccessColor, follow your own design system
+  /// can use in first initialize app
   static setSuccessColor({
     Color? success100,
     Color? success200,
@@ -109,7 +118,8 @@ class InitialValue{
     ColorTheme.success800 =  success800 ?? const Color(0xff1b5302);
     ColorTheme.success900 =  success900 ?? const Color(0xff091c01);
   }
-
+  /// static setDangerColor use to change default value of DangerColor, follow your own design system
+  /// can use in first initialize app
   static setDangerColor({
     Color? danger100,
     Color? danger200,
@@ -131,7 +141,8 @@ class InitialValue{
     ColorTheme.danger800 =  danger800 ?? const Color(0xff4d0815);
     ColorTheme.danger900 =  danger900 ?? const Color(0xff1a0307);
   }
-
+  /// static setGreyColor use to change default value of GreyColor, follow your own design system
+  /// can use in first initialize app
   static setGreyColor({
     Color? grey100,
     Color? grey200,
@@ -153,7 +164,8 @@ class InitialValue{
     ColorTheme.grey800 =  grey800 ?? const Color(0xff2a2a2a);
     ColorTheme.grey900 =  grey900 ?? const Color(0xff0e0e0e);
   }
-
+  /// static setBlueGreyColor use to change default value of BlueGreyColor, follow your own design system
+  /// can use in first initialize app
   static setBlueGreyColor({
     Color? bluegrey100,
     Color? bluegrey200,
