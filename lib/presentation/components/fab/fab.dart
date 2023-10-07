@@ -4,19 +4,20 @@ import 'package:standard_ui_core/presentation/utility/utility.dart';
 
 
 class StandardFab {
+  /// Component of Floating Action Button
   FloatingActionButton fab({
-    Widget? iconWidget,
-    String? title,
-    bool isDisabled = false,
-    bool isLoading = false,
-    Function()? onTap,
-    Color? backgroundColor,
-    Color? disabledBackgroundColor,
-    Color? titleColor,
-    Color? disabledTitleColor,
-    Color? loadingColor,
-    double? elevation,
-    IconPosition? iconPosition,
+    Widget? iconWidget, /// change icon widget
+    String? title, /// change title
+    bool isDisabled = false, /// change state isDisabled
+    bool isLoading = false, /// change state isLoading
+    Function()? onTap, /// call function on Tap
+    Color? backgroundColor, /// change background color
+    Color? disabledBackgroundColor, /// change disabled background color
+    Color? titleColor, /// change title color
+    Color? disabledTitleColor, /// change disabled title color
+    Color? loadingColor, /// change loading color
+    double? elevation, /// change elevation
+    IconPosition? iconPosition, /// change icon position
   }) {
     if (title == null) {
       /// title is null then use circle fab

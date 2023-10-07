@@ -1,3 +1,5 @@
-## 0.0.1
+## 0.0.2
 
-First Release, see readme for use this package
+- Change of readme
+- Add comment to a function 
+- Change default value of device size

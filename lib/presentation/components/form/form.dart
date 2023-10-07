@@ -4,36 +4,37 @@ import 'package:standard_ui_core/presentation/core/label_position.dart';
 import 'package:standard_ui_core/presentation/utility/utility.dart';
 
 class StandardForm {
+  /// Componenent of basic form
   Widget basic({
-    final EdgeInsetsGeometry? margin,
-    final String? hintText,
-    final TextEditingController? controller,
-    final String? initialValue,
-    final String? labelText,
-    final bool obscureText = false,
-    final bool enabled = true,
-    final bool autofocus = false,
-    final bool readOnly = false,
-    final LabelPosition labelPosition = LabelPosition.left,
-    final int? maxLines = 1,
-    final Widget? prefixIcon,
-    final Widget? suffixIcon,
-    final TextCapitalization textCapitalization = TextCapitalization.none,
-    final TextInputType? keyboardType,
-    final List<TextInputFormatter>? inputFormatters,
-    final Function()? onTap,
-    final Function(String)? onChanged,
-    final Function(String)? onFieldSubmitted,
-    final String? Function(String?)? validator,
-    final TextStyle? hintStyle,
-    final Color? labelColor,
-    final Color? disableLabelColor,
-    final Color? textColor,
-    final Color? disableTextColor,
-    final Color? focusedColor,
-    final Color? borderColor,
-    final Color? errorColor,
-    final Color? disabledColor,
+    final EdgeInsetsGeometry? margin, /// change margin
+    final String? hintText, /// change hint text
+    final TextEditingController? controller, /// set controller
+    final String? initialValue, /// change initial value
+    final String? labelText, /// change label text
+    final bool obscureText = false, /// change state obscure text
+    final bool enabled = true, /// change state enabled
+    final bool autofocus = false, /// change state auto focus
+    final bool readOnly = false, /// change state read only
+    final LabelPosition labelPosition = LabelPosition.left, /// change label position
+    final int? maxLines = 1, /// change max lines
+    final Widget? prefixIcon, /// change prefix icon
+    final Widget? suffixIcon, /// change suffix icon
+    final TextCapitalization textCapitalization = TextCapitalization.none, /// change text capitalization
+    final TextInputType? keyboardType, /// change keyboard type
+    final List<TextInputFormatter>? inputFormatters, /// change text input formatters
+    final Function()? onTap, /// call function on tap
+    final Function(String)? onChanged, /// call function when change value
+    final Function(String)? onFieldSubmitted, /// call function when on field submitted
+    final String? Function(String?)? validator, /// change validator
+    final TextStyle? hintStyle, /// change hint style
+    final Color? labelColor, /// change label color
+    final Color? disableLabelColor, /// change disable label color
+    final Color? textColor, /// change text color
+    final Color? disableTextColor, /// change disable text color
+    final Color? focusedColor, /// change focus color
+    final Color? borderColor, /// change border color
+    final Color? errorColor, /// change error color
+    final Color? disabledColor, /// change disable color
   }) {
     return Container(
       margin: margin,

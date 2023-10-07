@@ -3,13 +3,14 @@ import 'package:standard_ui_core/presentation/core/icon_position.dart';
 import 'package:standard_ui_core/presentation/core/screen_size.dart';
 import 'package:standard_ui_core/presentation/utility/utility.dart';
 
+/// ButtonSize is a default of button size use in standardButton component
 enum ButtonSize{
   fullWidth,
   large,
   medium,
   small,
 }
-
+/// function to change Button Size into a value following of device width
 double funcButtonSizeConverter(ButtonSize buttonSize) {
   switch (buttonSize) {
     case ButtonSize.fullWidth:
@@ -22,7 +23,7 @@ double funcButtonSizeConverter(ButtonSize buttonSize) {
       return screenSize.width * 0.25;
   }
 }
-
+/// function to convert size of loading size when using in button
 double funcLoadingSizeConverter(ButtonSize buttonSize) {
   /// Default loading indicator size will follow text size
   switch (buttonSize) {
@@ -36,7 +37,8 @@ double funcLoadingSizeConverter(ButtonSize buttonSize) {
       return StandardFontSize.h6;
   }
 }
-
+/// function to change font size in button
+/// careful when change standardHeaderFontSize its not make button size following size of text
 double funcFontSizeConverter(ButtonSize buttonSize){
   switch (buttonSize) {
     case ButtonSize.fullWidth:
@@ -49,29 +51,30 @@ double funcFontSizeConverter(ButtonSize buttonSize){
       return StandardFontSize.h6;
   }
 }
-
+/// Component of Standard Button
 class StandardButton {
+  /// Component of Primary Button
   Widget primaryButton({
-    required title,
-    EdgeInsets? margin,
-    ButtonSize? buttonSize,
-    double? borderRadius,
-    double? elevation,
-    bool isLoading = false,
-    bool isDisabled = false,
-    Color? backgroundColor,
-    Color? disabledBackgroundColor,
-    Color? titleColor,
-    Color? disabledTitleColor,
-    Color? splashColor,
-    Color? disabledSplashColor,
-    Color? borderColor,
-    Color? disabledBorderColor,
-    Color? loadingColor,
-    Widget? loadingWidget,
-    Function()? onTap,
-    IconPosition? iconPosition,
-    Widget? iconWidget
+    required title, /// change title
+    EdgeInsets? margin, /// change margin
+    ButtonSize? buttonSize, /// change button size
+    double? borderRadius, /// change border radius
+    double? elevation, /// change elevation
+    bool isLoading = false, /// change state isLoading
+    bool isDisabled = false, /// change state isDisable
+    Color? backgroundColor, /// change background Color
+    Color? disabledBackgroundColor, /// change disable background color
+    Color? titleColor, /// change title color
+    Color? disabledTitleColor, /// change disable title color
+    Color? splashColor, /// change splash color
+    Color? disabledSplashColor, /// change disable splash color
+    Color? borderColor, /// change border color
+    Color? disabledBorderColor, /// change disable border color
+    Color? loadingColor, /// change loading color
+    Widget? loadingWidget, /// change loading widget
+    Function()? onTap, /// call function using on tap
+    IconPosition? iconPosition, /// change icon position
+    Widget? iconWidget /// change icon widget
   }) {
     return Padding(
       padding : margin ?? const EdgeInsets.symmetric(vertical: 4),
@@ -121,28 +124,28 @@ class StandardButton {
       ),
     );
   }
-
+  /// Component of Secondary Button
   Widget secondaryButton({
-    required title,
-    EdgeInsets? margin,
-    ButtonSize? buttonSize,
-    double? borderRadius,
-    double? elevation,
-    bool isLoading = false,
-    bool isDisabled = false,
-    Color? backgroundColor,
-    Color? disabledBackgroundColor,
-    Color? titleColor,
-    Color? disabledTitleColor,
-    Color? splashColor,
-    Color? disabledSplashColor,
-    Color? borderColor,
-    Color? disabledBorderColor,
-    Color? loadingColor,
-    Widget? loadingWidget,
-    Function()? onTap,
-    IconPosition? iconPosition,
-    Widget? iconWidget
+    required title, /// change title
+    EdgeInsets? margin, /// change margin
+    ButtonSize? buttonSize, /// change button size
+    double? borderRadius, /// change border radius
+    double? elevation, /// change elevation
+    bool isLoading = false, /// change state isLoading
+    bool isDisabled = false, /// change state isDisabled
+    Color? backgroundColor, /// change background color
+    Color? disabledBackgroundColor, /// change disable background color
+    Color? titleColor, /// change title color
+    Color? disabledTitleColor, /// change disable title color
+    Color? splashColor, /// change splash color
+    Color? disabledSplashColor, /// change disable splash color
+    Color? borderColor, /// change border color
+    Color? disabledBorderColor, /// change disable border color
+    Color? loadingColor, /// change loading color
+    Widget? loadingWidget, /// change loading widget
+    Function()? onTap, /// call function using onTap
+    IconPosition? iconPosition, /// change icon position
+    Widget? iconWidget /// change icon widget
   }) {
     return Padding(
       padding : margin ?? const EdgeInsets.symmetric(vertical: 4),
@@ -192,15 +195,15 @@ class StandardButton {
       ),
     );
   }
-
+  /// Component of Tertiary Button
   Widget tertiaryButton({
-    required title,
-    EdgeInsets? margin,
-    bool isLoading = false,
-    bool isDisabled = false,
-    Color? titleColor,
-    Color? disabledTitleColor,
-    Function()? onTap,
+    required title, /// change title
+    EdgeInsets? margin, /// change margin
+    bool isLoading = false, /// change state isLoading
+    bool isDisabled = false, /// change state isDisable
+    Color? titleColor, /// change title color
+    Color? disabledTitleColor, /// change disable title color
+    Function()? onTap, /// call function using onTap
   }) {
     return Padding(
       padding : margin ?? const EdgeInsets.symmetric(vertical: 4),
