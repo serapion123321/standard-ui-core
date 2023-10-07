@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:standard_ui_core/presentation/utility/utility.dart';
 
+/// enum of chipSize
 enum ChipSize {
   large,
   medium,
   small,
 }
-
+/// function to convert chip size into font size
 double funcFontSizeConverter(ChipSize buttonSize) {
   switch (buttonSize) {
     case ChipSize.large:
@@ -17,7 +18,7 @@ double funcFontSizeConverter(ChipSize buttonSize) {
       return StandardFontSize.h6;
   }
 }
-
+/// function to convert chip size into icon close default size
 double funcIconCloseConverter(ChipSize buttonSize) {
   switch (buttonSize) {
     case ChipSize.large:
@@ -30,25 +31,27 @@ double funcIconCloseConverter(ChipSize buttonSize) {
 }
 
 class StandardChip {
+  /// Component of Chip
   Widget chip(
-      {required String title,
-      EdgeInsets? margin,
-      ChipSize? chipSize,
-      double? borderRadius,
-      double? elevation,
-      bool isDisabled = false,
-      bool isUsingCloseIcon = false,
-      Color? backgroundColor,
-      Color? disabledBackgroundColor,
-      Color? titleColor,
-      Color? disabledTitleColor,
-      Color? splashColor,
-      Color? borderColor,
-      Color? disabledBorderColor,
-      Function()? onTap,
-      Function()? onTapClose,
-      Widget? iconWidget,
-      Widget? iconCloseWidget}) {
+      {required String title, /// change title
+      EdgeInsets? margin, /// change margin
+      ChipSize? chipSize, /// change chipSize
+      double? borderRadius, /// change borderRadius
+      double? elevation, /// change elevation
+      bool isDisabled = false, /// change state isDisabled
+      bool isUsingCloseIcon = false, /// change is using close icon
+      Color? backgroundColor, /// change background color
+      Color? disabledBackgroundColor, /// change disable background color
+      Color? titleColor, /// change title color
+      Color? disabledTitleColor, /// change disabled title color
+      Color? splashColor, /// change splash color
+      Color? borderColor, /// change border color
+      Color? disabledBorderColor, /// change disabled title color
+      Function()? onTap, /// call function onTap
+      Function()? onTapClose, /// call function when close button tapped
+      Widget? iconWidget, /// change icon widget
+      Widget? iconCloseWidget /// change icon close widget
+      }) {
     return Padding(
       padding: margin ?? const EdgeInsets.symmetric(vertical: 4),
       child: Material(

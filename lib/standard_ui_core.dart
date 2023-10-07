@@ -10,7 +10,7 @@ class InitialValue{
   static setScreenSize({
     Size? screenSizeCustom
   }){
-    screenSize = screenSizeCustom ?? WidgetsBinding.instance.window.physicalSize;
+    screenSize = screenSizeCustom ?? WidgetsBinding.instance.platformDispatcher.views.first.physicalSize;
   }
   /// static setBodyFontSize use to change default value of BodyFontSize, follow your own design system
   /// can use in first initialize app
