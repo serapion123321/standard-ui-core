@@ -72,4 +72,12 @@ class ColorTheme{
   static Color bluegrey800 =  const Color(0xff202735);
   static Color bluegrey900 =  const Color(0xff0b0d12);
 
+  static Color? primaryBackgroundColor;
+  static Color? primaryTitleColor;
+  static Color? primaryStrokeColor;
+  static Color? secondaryBackgroundColor;
+  static Color? secondaryTitleColor;
+  static Color? secondaryStrokeColor;
+  static Color? tertiaryTitleColor;
+
 }
