@@ -1,3 +1,10 @@
+## 0.0.3
+
+- Change of button color
+- New setting for button
+
+
+
 ## 0.0.2
 
 - Change of readme

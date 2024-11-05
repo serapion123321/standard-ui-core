@@ -81,7 +81,7 @@ class StandardButton {
       child: Material(
         color: isDisabled
             ? disabledBackgroundColor ?? ColorTheme.grey700
-            : backgroundColor ?? ColorTheme.primary700,
+            : backgroundColor ?? ColorTheme.primaryBackgroundColor ?? ColorTheme.primary700,
         elevation: elevation ?? 1,
         borderRadius: BorderRadius.circular(borderRadius ?? 12),
         child: InkWell(
@@ -97,7 +97,7 @@ class StandardButton {
               border: Border.all(
                   color: isDisabled
                       ? disabledBorderColor ?? ColorTheme.black
-                      : borderColor ?? ColorTheme.primary500
+                      : borderColor ?? ColorTheme.primaryStrokeColor ??  ColorTheme.primary500
               )
             ),
             child: isLoading ? loadingChildContainer(
@@ -115,7 +115,7 @@ class StandardButton {
                   text: title,
                   color: isDisabled
                       ? disabledTitleColor ?? ColorTheme.black
-                      : titleColor ?? ColorTheme.black
+                      : titleColor ?? ColorTheme.primaryTitleColor ?? ColorTheme.black
               ),
               icon: iconWidget
             )
@@ -152,7 +152,7 @@ class StandardButton {
       child: Material(
         color: isDisabled
             ? disabledBackgroundColor ?? ColorTheme.grey700
-            : backgroundColor ?? ColorTheme.white,
+            : backgroundColor ?? ColorTheme.secondaryBackgroundColor ?? ColorTheme.white,
         elevation: elevation ?? 1,
         borderRadius: BorderRadius.circular(borderRadius ?? 12),
         child: InkWell(
@@ -168,7 +168,7 @@ class StandardButton {
                   border: Border.all(
                       color: isDisabled
                           ? disabledBorderColor ?? ColorTheme.black
-                          : borderColor ?? ColorTheme.primary500
+                          : borderColor ?? ColorTheme.secondaryStrokeColor ??ColorTheme.primary500
                   )
               ),
               child: isLoading ? loadingChildContainer(
@@ -186,7 +186,7 @@ class StandardButton {
                       text: title,
                       color: isDisabled
                           ? disabledTitleColor ?? ColorTheme.black
-                          : titleColor ?? ColorTheme.black
+                          : titleColor ?? ColorTheme.secondaryTitleColor ??ColorTheme.black
                   ),
                   icon: iconWidget
               )
@@ -203,6 +203,7 @@ class StandardButton {
     bool isDisabled = false, /// change state isDisable
     Color? titleColor, /// change title color
     Color? disabledTitleColor, /// change disable title color
+    double? fontSize,
     Function()? onTap, /// call function using onTap
   }) {
     return Padding(
@@ -210,11 +211,11 @@ class StandardButton {
       child: GestureDetector(
         onTap: isLoading || isDisabled ? (){} : onTap,
         child: standardHeaderText(
-            fontSize: StandardFontSize.h6,
+            fontSize: fontSize ?? StandardFontSize.h6,
             text: title,
             color: isDisabled || isLoading
                 ? disabledTitleColor ?? ColorTheme.grey700
-                : titleColor ?? ColorTheme.black
+                : titleColor ?? ColorTheme.tertiaryTitleColor ?? ColorTheme.black
         ),
       ),
     );

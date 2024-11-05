@@ -187,4 +187,22 @@ class InitialValue{
     ColorTheme.bluegrey800 =  bluegrey800 ?? const Color(0xff202735);
     ColorTheme.bluegrey900 =  bluegrey900 ?? const Color(0xff0b0d12);
   }
+
+  static setButtonColor({
+    Color? primaryBackgroundColor,
+    Color? primaryTitleColor,
+    Color? primaryStrokeColor,
+    Color? secondaryBackgroundColor,
+    Color? secondaryTitleColor,
+    Color? secondaryStrokeColor,
+    Color? tertiaryTitleColor
+  }){
+    ColorTheme.primaryBackgroundColor = primaryBackgroundColor;
+    ColorTheme.primaryTitleColor = primaryTitleColor;
+    ColorTheme.primaryStrokeColor = primaryStrokeColor;
+    ColorTheme.secondaryBackgroundColor = secondaryBackgroundColor;
+    ColorTheme.secondaryTitleColor = secondaryTitleColor;
+    ColorTheme.secondaryStrokeColor = secondaryStrokeColor;
+    ColorTheme.tertiaryTitleColor = tertiaryTitleColor;
+  }
 }
