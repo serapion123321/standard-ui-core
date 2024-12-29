@@ -1,6 +1,6 @@
 name: standard_ui_core
 description: This package contain standarization to make application using flutter framework. it will make easier to make boring component like button or form.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/serapion123321/standard-ui-core
 
 environment:

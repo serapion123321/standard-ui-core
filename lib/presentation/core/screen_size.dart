@@ -1,2 +1,5 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
-Size screenSize = WidgetsBinding.instance.window.physicalSize;
+
+FlutterView view = WidgetsBinding.instance.platformDispatcher.views.first;
+Size screenSize = view.physicalSize / view.devicePixelRatio;
