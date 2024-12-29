@@ -1,3 +1,9 @@
+
+## 0.0.4
+
+- Fixing default screen size
+
+
 ## 0.0.3
 
 - Change of button color
