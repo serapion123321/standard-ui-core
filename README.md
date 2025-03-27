@@ -46,7 +46,11 @@ You can change color default, there are many color default thay i prepare, they 
 void setColorPrimary() {    
   InitialValue.setPrimaryColor(    
   /// InitialValue.setPrimaryColor can be change to any group color you want to change  
- /// here just change primary 500 and primary700 primary500: const Color(0xff00e9ff), primary700: const Color(0xff7FFFD4)); }  
+ /// here just change primary 500 and primary700
+      primary500: const Color(0xff00e9ff), 
+      primary700: const Color(0xff7FFFD4)
+  ); 
+}  
 ```  
 
 You can change default size for any header text and body text, just use this function
@@ -219,37 +223,39 @@ for the default size is bodyTextS and color is ColorTheme.black
 ## Form
 ### Form Properties
 
-|Properties| Default Value    
-|--|--  
-| margin| null  
-| hintText| null  
-| controller| null  
-| initialValue| null  
-| labelText|null  
-| obscureText|  false  
-| enabled|  true  
-| autofocus|  false  
-| readOnly| false  
-| labelPosition| LabelPosition.left  
-| maxLines| 1  
-| prefixIcon| null  
-| suffixIcon| null  
-| hintText| null  
-| textCapitalization| TextCapitalization.none  
-| keyboardType| null  
-| inputFormatters|null  
-| onTap|  null  
-| onChanged|  null  
-| onFieldSubmitted|  null  
-| hintStyle| BodyTextStyle.textStyle(  color: ColorTheme.grey700,  fontSize: StandardFontSize.bodyTextXs)  
-| labelColor| ColorTheme.black  
-| disableLabelColor| ColorTheme.grey700  
-| textColor| ColorTheme.black  
-| disableTextColor|  ColorTheme.grey700  
-| focusedColor|  ColorTheme.primary500  
-| errorColor|  ColorTheme.danger500  
-| disabledColor| ColorTheme.grey500  
-| borderColor| ColorTheme.black
+| Properties         | Default Value    
+|--------------------|--  
+| margin             | null  
+| hintText           | null  
+| controller         | null  
+| initialValue       | null  
+| labelText          |null  
+| obscureText        |  false  
+| enabled            |  true  
+| autofocus          |  false  
+| readOnly           | false  
+| labelPosition      | LabelPosition.left  
+| maxLines           | 1  
+| prefixIcon         | null  
+| suffixIcon         | null  
+| hintText           | null  
+| textCapitalization | TextCapitalization.none  
+| keyboardType       | null  
+| inputFormatters    |null  
+| onTap              |  null  
+| onChanged          |  null  
+| onFieldSubmitted   |  null  
+| hintStyle          | BodyTextStyle.textStyle(  color: ColorTheme.grey700,  fontSize: StandardFontSize.bodyTextXs)  
+| labelColor         | ColorTheme.black  
+| disableLabelColor  | ColorTheme.grey700  
+| textColor          | ColorTheme.black  
+| disableTextColor   |  ColorTheme.grey700  
+| focusedColor       |  ColorTheme.primary500  
+| errorColor         |  ColorTheme.danger500  
+| disabledColor      | ColorTheme.grey500  
+| borderColor        | ColorTheme.black
+| errorMaxLines      | 2
+| errorStyle         | TextStyle(color: ColorTheme.danger500,fontSize: StandardFontSize.bodyTextS)
 
 ## To Do / Roadmap
 

@@ -35,6 +35,8 @@ class StandardForm {
     final Color? borderColor, /// change border color
     final Color? errorColor, /// change error color
     final Color? disabledColor, /// change disable color
+    final int? errorMaxLines, /// change error max lines
+    final TextStyle? errorStyle /// change error style
   }) {
     return Container(
       margin: margin,
@@ -78,6 +80,11 @@ class StandardForm {
               keyboardType: keyboardType,
               inputFormatters: inputFormatters,
               decoration: InputDecoration(
+                errorStyle: errorStyle ?? TextStyle(
+                  color: ColorTheme.danger500,
+                  fontSize: StandardFontSize.bodyTextS
+                ),
+                errorMaxLines: errorMaxLines ?? 2,
                 focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                     borderSide: BorderSide(color: focusedColor ?? ColorTheme.primary500)),
