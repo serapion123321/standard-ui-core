@@ -80,10 +80,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Container(
           margin: const EdgeInsets.symmetric(horizontal: 16),
-          child: SingleChildScrollView(
+          child: const SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const <Widget>[
+              children: <Widget>[
                 HeaderFontWidget(),
                 BodyFontWidget(),
                 ButtonPrimaryBySizeWidget(),
