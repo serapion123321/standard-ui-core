@@ -1,4 +1,10 @@
 
+## 0.0.5
+
+- Add error style in form
+- Add error max lines
+
+
 ## 0.0.4
 
 - Fixing default screen size
