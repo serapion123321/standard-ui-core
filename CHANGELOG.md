@@ -1,4 +1,9 @@
 
+## 0.0.6
+
+- fix error size in default screenSize
+- use listener size to make it responsive
+
 ## 0.0.5
 
 - Add error style in form
