@@ -1,4 +1,9 @@
 
+# Project Title
+
+Standard UI Core
+
+
 ## Table Of Contents
 
 - [Description](https://github.com/serapion123321/standard-ui-core#description)
@@ -31,42 +36,53 @@ Flutter simple UI core. This plugin is about UI only. All of the UI here are hea
 
 ## Getting started
 
-use InitialValue.setScreenSize to get width and height for device (place it in very first initState on your app. You can use get package or mediaquery is really up to you
 
-```dart  
-void setScreenSize(){    
-  InitialValue.setScreenSize(    
-    screenSizeCustom: Get.size  /// using get package  
- ); }  
-```  
+**WARNING**: BREAKING IN VERSION 0.0.6
+
+use ScreenSizeInitializer or ScreenSizeCustomInitializer to set size.
+Default will be width 120 and height 120 (view example). Primary button and secondary button use ValueListenableBuilder to make it responsive
+
+```dart 
+return MaterialApp(
+      title: 'Standard UI Core',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const ScreenSizeInitializer(
+          child: MyHomePage(title: 'Standard UI Core Demo')
+      ),
+    );
+```
+
+
 
 You can change color default, there are many color default thay i prepare, they are : neutral color, primary color, secondary color, success color, danger color, grey color, and blue-grey color all with 9 shade, example primary500, danger300. Here to change them :
 
 ```dart  
-void setColorPrimary() {    
-  InitialValue.setPrimaryColor(    
-  /// InitialValue.setPrimaryColor can be change to any group color you want to change  
- /// here just change primary 500 and primary700
-      primary500: const Color(0xff00e9ff), 
+void setColorPrimary() {
+  InitialValue.setPrimaryColor(
+    /// InitialValue.setPrimaryColor can be change to any group color you want to change  
+    /// here just change primary 500 and primary700
+      primary500: const Color(0xff00e9ff),
       primary700: const Color(0xff7FFFD4)
-  ); 
+  );
 }  
 ```  
 
 You can change default size for any header text and body text, just use this function
 
 ```dart  
-void setInitialBodyFontSize(){    
-  InitialValue.setBodyFontSize(   
-  /// Here to change body font size   
-     bodyTextXxl: 64,    
-     bodyTextXl: 24,    
-     bodyTextL: 52,    
-     bodyTextM: 48,    
-     bodyTextS: 40,    
-     bodyTextXs: 38,    
-     bodyTextXxs: 24    
-); }  
+void setInitialBodyFontSize(){
+  InitialValue.setBodyFontSize(
+    /// Here to change body font size   
+      bodyTextXxl: 64,
+      bodyTextXl: 24,
+      bodyTextL: 52,
+      bodyTextM: 48,
+      bodyTextS: 40,
+      bodyTextXs: 38,
+      bodyTextXxs: 24
+  ); }  
 ```  
 
 ## Components

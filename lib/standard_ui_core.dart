@@ -1,18 +1,40 @@
-library standard_ui_core;
+library;
 import 'package:flutter/material.dart';
-import 'package:standard_ui_core/presentation/core/screen_size.dart';
 import 'package:standard_ui_core/presentation/utility/color.dart';
 import 'package:standard_ui_core/presentation/utility/typography.dart';
 
 class InitialValue{
+  static double screenWidth = 120; // fallback default
+  static double screenHeight = 120; // fallback default
+  static final ValueNotifier<Size> screenSizeNotifier = ValueNotifier(const Size(0, 0));
   /// static screenSize for change value of screenSize device, can use be overwrite with getX or MediaQuery
   /// please use that on first initialize app
   /// value default still not flexible enough to follow change in device size
-  static setScreenSize({
-    Size? screenSizeCustom
-  }){
-    screenSize = screenSizeCustom ?? WidgetsBinding.instance.platformDispatcher.views.first.physicalSize;
+  static void setCustomScreenSize(Size size){
+    screenWidth = size.width;
+    screenHeight = size.height;
+    screenSizeNotifier.value = size;
   }
+
+  /// if not use custom screen size, just call initSafe in main.dart
+  /// make sure widget ensureInitialize
+  static void initScreenSize(size) {
+    try {
+
+      /// size validation
+      if (size.width > 0 && size.height > 0) {
+        screenWidth = size.width;
+        screenHeight = size.height;
+        screenSizeNotifier.value = size;
+      }
+    } catch (e) {
+      // fallback to default
+      screenWidth = 120;
+      screenHeight = 120;
+    }
+ }
+
+
   /// static setBodyFontSize use to change default value of BodyFontSize, follow your own design system
   /// can use in first initialize app
   static setBodyFontSize({
