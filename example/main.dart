@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:standard_ui_core/presentation/components/pages/init_page.dart';
 import 'package:standard_ui_core/standard_ui_core.dart';
 import 'package:standard_ui_core/presentation/components/button/button.dart';
 import 'package:standard_ui_core/presentation/components/chip/chip.dart';
@@ -7,9 +8,9 @@ import 'package:standard_ui_core/presentation/components/form/form.dart';
 import 'package:standard_ui_core/presentation/core/icon_position.dart';
 import 'package:standard_ui_core/presentation/utility/color.dart';
 import 'package:standard_ui_core/presentation/utility/typography.dart';
-import 'package:get/get.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -23,7 +24,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Standard UI Core Demo'),
+      home: const ScreenSizeInitializer(
+          child: MyHomePage(title: 'Standard UI Core Demo')
+      ),
     );
   }
 }
@@ -43,11 +46,10 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     //setInitialBodyFontSize();
     setColorPrimary();
-    setScreenSize();
     super.initState();
   }
 
-  /// Uncomment this to change body font size
+  /// Uncomment this to change body font size, uncomment in initState too
   // void setInitialBodyFontSize(){
   //   InitialValue.setBodyFontSize(
   //       bodyTextXxl: 64,
@@ -59,12 +61,6 @@ class _MyHomePageState extends State<MyHomePage> {
   //       bodyTextXxs: 24
   //   );
   // }
-
-  void setScreenSize(){
-    InitialValue.setScreenSize(
-        screenSizeCustom: Get.size
-    );
-  }
 
   void setColorPrimary() {
     InitialValue.setPrimaryColor(
