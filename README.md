@@ -23,6 +23,8 @@ Standard UI Core
         - [FAB Properties](https://github.com/serapion123321/standard-ui-core#fab-properties)
     - [Form](https://github.com/serapion123321/standard-ui-core#form)
         - [Form Properties](https://github.com/serapion123321/standard-ui-core#form-properties)
+    - [Avatar](https://github.com/serapion123321/standard-ui-core#avatar)
+        - [Avatar Properties](https://github.com/serapion123321/standard-ui-core#avatar-properties)
 - [To Do / Roadmap](https://github.com/serapion123321/standard-ui-core#to-do--roadmap)
 - [Information](https://github.com/serapion123321/standard-ui-core#information)
 
@@ -273,12 +275,29 @@ for the default size is bodyTextS and color is ColorTheme.black
 | errorMaxLines      | 2
 | errorStyle         | TextStyle(color: ColorTheme.danger500,fontSize: StandardFontSize.bodyTextS)
 
+
+## Avatar
+### Avatar Properties
+
+| Properties         | Default Value    
+|--------------------|--  
+| isUseMax           | false  
+| countMax           | 3  
+| source             | null  
+| border             | null  
+| height             | 72.0  
+| width              |  72.0  
+| marginLeft         |  12.0  
+| bgColor            |  null  
+| customMaxWidget    | null  
+
+
+
 ## To Do / Roadmap
 
-**Version 1.0.0**
+**Version 1.1.0**
 - [ ] More Type of Form
 - [ ] Card Components
-- [ ] Avatar
 
 ## Information
 
