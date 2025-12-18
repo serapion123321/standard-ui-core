@@ -5,6 +5,7 @@ import 'package:standard_ui_core/presentation/components/button/button.dart';
 import 'package:standard_ui_core/presentation/components/chip/chip.dart';
 import 'package:standard_ui_core/presentation/components/fab/fab.dart';
 import 'package:standard_ui_core/presentation/components/form/form.dart';
+import 'package:standard_ui_core/presentation/components/avatar/avatar.dart';
 import 'package:standard_ui_core/presentation/core/icon_position.dart';
 import 'package:standard_ui_core/presentation/utility/color.dart';
 import 'package:standard_ui_core/presentation/utility/typography.dart';
@@ -650,3 +651,28 @@ class FormBasic extends StatelessWidget {
     );
   }
 }
+
+class Avatar extends StatelessWidget {
+  Avatar({super.key});
+
+  final bool isUseMax = true;
+  final int countMax = 3;
+
+  final List<String> source = [
+    'https://plus.unsplash.com/premium_photo-1669833443895-ce69a383fc64?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://plus.unsplash.com/premium_photo-1669833443895-ce69a383fc64?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://plus.unsplash.com/premium_photo-1669833443895-ce69a383fc64?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://plus.unsplash.com/premium_photo-1669833443895-ce69a383fc64?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return StandardAvatar().avatar(
+        source: source,
+        isUseMax: true,
+        countMax: 2,
+        border: Border.all(color: Colors.white, width: 3)
+    );
+  }
+}
+

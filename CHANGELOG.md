@@ -1,3 +1,6 @@
+## 1.0.0
+
+- add standard avatar
 
 ## 0.0.6
 

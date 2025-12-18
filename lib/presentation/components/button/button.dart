@@ -59,7 +59,7 @@ double funcFontSizeConverter(ButtonSize buttonSize) {
 class StandardButton {
   /// Component of Primary Button
   Widget primaryButton(
-      {required title,
+      {required String title,
 
       /// change title
       EdgeInsets? margin,
@@ -187,7 +187,7 @@ class StandardButton {
 
   /// Component of Secondary Button
   Widget secondaryButton(
-      {required title,
+      {required String title,
 
       /// change title
       EdgeInsets? margin,
@@ -315,7 +315,7 @@ class StandardButton {
 
   /// Component of Tertiary Button
   Widget tertiaryButton({
-    required title,
+    required String title,
 
     /// change title
     EdgeInsets? margin,
